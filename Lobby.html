@@ -48,27 +48,46 @@
     }
   </style>
 
-  
+  <script>
+    window.addEventListener("load", function(){
+      var load_screen = document.getElementsByClassName("spinner")
+      document.body.removeChild("bounce1");
+      document.body.removeChild("bounce2");
+      document.body.removeChild("bounce3");
+      document.body.removeChild("spinner");
+    });
+  </script>
   <meta charset="utf-8">
-  <title>Lobby</title>
+  <title>12th Floor</title>
   <meta name="description" content="360&deg; Image Gallery - A-Frame">
+   <script type="text/javascript">
+
+      window.addEventListener("keypress", checkKeyPressed, false);
+      
+function checkKeyPressed(e) {
+    if (e.charCode == "105") {
+        speak();
+        alert("12 South and its surrounding area was designed for George in 1935. …and it becomes George’s second office. He stays in that office at 12 South from 1935 until 1940 and then in 1940 he moves to 8 North office…  After George leaves 12 South in 1935…we put his son, Ramond Mecherle…there. Ramond remains in 12 South until he passes in 1954. They put the next president in 12 South which is Adlai Rust. Adlai Rust remains in that location until 1970. When he retires, they put Ed Rust Senior in there until 1974 when…they move Ed Senior to corporate headquarters. …Ed Rust Junior and Michael Tipsord have both sat at corporate headquarters and are the only two CEOs of the company who have not actually sat in our downtown facility.");
+    }
+}
+</script>
   <script src="https://aframe.io/releases/0.8.0/aframe.min.js"></script>
   <script src="components/set-image.js"></script>
   <script src="https://unpkg.com/aframe-template-component@3.x.x/dist/aframe-template-component.min.js"></script>
   <script src="https://unpkg.com/aframe-layout-component@3.x.x/dist/aframe-layout-component.min.js"></script>
   <script src="https://unpkg.com/aframe-event-set-component@3.x.x/dist/aframe-event-set-component.min.js"></script>
   <script src="https://rawgit.com/atomicguy/aframe-fence-component/master/dist/aframe-fence-component.min.js"></script> 
- <script src="https://10.233.76.42:4443/dist/cvt-concat.js"></script>
   
 
 <!--[if gte mso 9]><xml>
 <mso:CustomDocumentProperties>
-<mso:_dlc_ExpireDate msdt:dt="string">2019-10-02T09:05:51Z</mso:_dlc_ExpireDate>
+<mso:_dlc_ExpireDate msdt:dt="string">2019-10-11T08:41:58Z</mso:_dlc_ExpireDate>
 <mso:ItemRetentionFormula msdt:dt="string">&lt;formula id=&quot;StateFarm.CustomFormula.Policy&quot; /&gt;</mso:ItemRetentionFormula>
 <mso:_dlc_policyId msdt:dt="string">/personal/ycaw/Documents</mso:_dlc_policyId>
 </mso:CustomDocumentProperties>
 </xml><![endif]-->
 </head>
+
 
 <body>
 
@@ -96,47 +115,35 @@
       </a-entity>
     </script>
     <audio id="click-sound" crossorigin="anonymous" src="https://cdn.aframe.io/360-image-gallery-boilerplate/audio/click.ogg"></audio>
-    <img id="Lobby" crossorigin="anonymous" src="SLobby1.jpg">
-    <img id="info" crossorigin="anonymous" src="https://farm1.staticflickr.com/882/42431631561_4ee91ac9bb_o_d.gif">
-     <img id ="Exit" crossorigin="anonymous" src="data:image/png;base64,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"> 
-       <img id = "arrow-up-thumb" crossorigin="anonymous" src="https://png.icons8.com/ios/2x/up.png">
+    <img id="Level12Office" crossorigin="anonymous" src="SLobby1.jpg">
+    <img id="upstairs" crossorigin="anonymous" src="https://imageog.flaticon.com/icons/png/512/25/25544.png?size=1200x630f&pad=10,10,10,10&ext=png&bg=FFFFFFFF">
+    <img id ="Exit" crossorigin="anonymous" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAAAvVBMVEX///8Vnmj19fXu7u8Am2IAl1t/vqPQ6d3E39MInWAAl1xZr4oAml3b6uN/v54WnWio0sAfnm3y+vd0vJms1sH8//8All8AnmT//P8Al1bn9O7E5NZrtpYAlFYFmmOw18UsoHLU5+B/xqdYsoljtJA7qXuLxq3l5ead0LgAnl1MqYGWy7OIxqlar43t+fhaq4hJr4Eqm3Gdzr4wqXcAlmSKwayTwrB1wKYAi1RAq3nm9+9qtJDb6OTS5doAkU3oDbF3AAAIFElEQVR4nO2di3aaShRAIR01EJIpIIyvoEahBm2a1vTmNmnv/3/WBZIIDBhBZkhOenbXah7Vke058x6s8unkY/NFOVE+Np/QEDxoCB80hA8awgcN4YOG8EFD+KAhfNAQPmgIHzSEDxrCBw3hg4bwQUP4oCF80BA+aAgfNIQPGsIHDeGDhvBBQ/igIXzQED5oCJ9PCp7Vh87fkKVoCB00hA8awgcN4YOG8CkY9rrQ6TvK4BXDz0MCnWvfcvYb9oYqfIyLvVk6UJbsrS9PBPpobwwtQ6VvfXkC0Fd7Deedt744IRB7r+FYf+uLEwJb7DU8rRdDwpgn6SIboZ2JMfQMfRvOXKMlSWJUQSeqMMPh2Wnc7VjT0JBmlYGMz6swspkgQ+1uuntWv43aq58rlbgQYhj1KOQh+7QWFCsbakJiSI3TXLEtRLHTriHr5ga3iuJLb25ajuEw/3KOMnXl+rVuOOPLtYhcv7YNybJQ8Ez7WIYXfLmKL9aQ6PwMQK4hP6VixRiaAqddxKCb+S+uQKmGhtHh8ByuXMsVZegR9zEaLJ3zU3F5hpS5Y6sAbzgVMHKL8pIZncXUispzNhqXpvIMmdFVeJ8ivoiZMzFmq6fZuTMw+QLlGWr+YT9l1Xh5hzHdDOaJXfxXcaIqy5Cqnd6hMgfKuHF/T+4mYyt7nYX+VVoMyfpgmc6PTtMcZf6Nkq0LTnEQKMtQC59fcveQQX5Aqtz0Z81bGcomubpwOiw0zbIM3eean76+w1VLei2ikaHaJJukj3xLKs1w2H/6vTVzX/j3d75Es7leXN09NV3jdE7c4rsmx1B7WZW72DVtOl8vhRiqxBxlsr9fMo6XFMPnlOztfk0KfYcQQ0KzSwbKomS2KcOQ6qdPOk5qMSz0HSIMOcGHy5LHyDAkQTKRd5SLXWNJuoUSBRh6kWA2NVZljbMEQ+/XU+s2GO9mMswsDEhFGJLsxUcvcFvWOEswfFn6scyXes8u8+tPggzJPC1tfuYoD6UjJPGGz4MZR7F3OaM9lpTYzDCKlpbpfv64xlJZl66ISIghWT+NgdNB9Z2lFGkaQzJPE/+cMNXY+KWPE29IVSN8iHN0N34ypnxpTQ2pSrIp2ks6iT1rWhJiSKOp4VSxd11T7mliDFXm9tKO/vzV9Top/SFl+lna93ZyfdZufEpyyxtGrVVF5s7TbuLca90wJhV0ueHay3s/n/cy/L6tY6hnxg/nB1bNpa8mUp+bVIzmShllA659RCm6K3MURfDVOYp0Q/0PV1I4L1m+ceoYutkIHsxu2YaFNeD+f00N3XH6vBE5EEHphhrNd4WD38RtaDjMClaYQ0s2vBzni3F8ppcZVq+HuQjSCi2wXMP8TkzU5PzToXr5GtyiSndBWSaCzsis8q5INaTqTT5ccyMa6NyelVFlABAvo6eFjfaNYlo01Lhmxkne9LJjgaxaBPVxmuGVUlS24TU377UbbWnnI2hF89+3N9TyhiO3yfm+SHCaHgKwqqVoy4bOyfKywX5oJzNFsSqmaMuGUR0aV78ynuMi2LJhfG3BkcfZ9EwET8wa71PbhtF0Nax/SojGEUzfpW2dfeOWDHPd4sqtnarDz5kU9Ws9vRXDaT9blKM8PNY7jsoucxGs9/60YOhE84kw9zIDZWwapHLHwS77aRJY/FmLd2AYb5iQ4cVNbgPRuqq6/UvVy8z58pop2p5hNFbzuFTtV9wfZfoqjaDja3UHDXLP07xkaZKRht/LtjinlQ4p5CLonNSOYJuGlHr6JHPHRjVD1c2m6K8j9sXFGdJC9tDrXAwjiLvazfmrGQ7TlTrHCo8ZEImMocfPiYa8oco6s5dNmkqG2Z1jK7w+QlCgIfl8UzzkxRvSqOEIqhpSdRjsXmHgfDtu1C7OUC/dneAM1fTOm4OGVO0EmVJCdtzU6/0aZgWdgXOmFSs6cEPVyEbw29GHNN+vIdnsChg4X42jFwdaMFSOM2ThS8cSCTY47y7ScM9py+NiSFUtPpWXFLBscgBOYH9IzT3km4jK9VBlsziKA2fZ6I4FkT0+00rh2ojqhpHiKI5g7cG2NMNq1DCMFG+UScN7Tt61YTQC+tWoDsa8a8P4zEXjO7/et6EI0BAN0bAIuVD4c29SqWxIhBkuRwnTo2bs9WnfUCV6QlsfquCtP1ciFGfYNtU+UyHZEjtoyLyoj07GkO/oo1xoRZJDuYcMTZ9uTeJRT62+KdESRCWMeCz6yhgjJPmRRT/E36jxr0kVQxJMzjaz9SZcz1Zi7hcRRBj69uxsES59M9wullfhIqS+HW4WXnhl2ktvQRfflwcMk1tHyLqrbuxlcGlv72dvbZWB2T+DYL3udvtd/ap7dWdP/rmny8AOAz0gdiR/dfdzHMaTvOv7vYbJvSNkc7ddbILNZE2v3pOhertefe/bX1fhajvp2tQONj+WF5P1ZjPbPNr2ld+d3E+CuGJlD0Pwn/UVxL2byegtnZn+bTSvf2urLDS6MjNqTDyaVB5Kycyn8R+T+t7WVO989flfrL2GA8fU1KcmlFGNFW5Tf1ue2ko1aeiT72h8gfE1sqQJTa42+qrnNgD5T6Q73w47+tOZbV3nb1IHQv68NmfoKM78Tw82I+U1ww8IGsIHDeGDhvBBQ/igIXzw/5mBz9+QpWgIHTSEDxrCBw3hg4bwQUP4oCF80BA+aAgfNIQPGsIHDeGDhvBBQ/igIXzQED5oCB80hA8awgcN4YOG8EFD+KAhfNAQPmgIn7/B8Munj82X/wG5NeCQVwnU1QAAAABJRU5ErkJggg==">
+    <img id="D8" crossorigin="anonymous" src="https://farm2.staticflickr.com/1734/27780139207_eee2bd57ae_o_d.jpg">
+    <img id ="Upstairs" crossorigin="anonymous" src="https://cdn0.iconfinder.com/data/icons/thin-building-signs/24/thin-0568_steps_upstairs-512.png">
+      <img id = "arrow-up-thumb" crossorigin="anonymous" src="https://png.icons8.com/ios/2x/up.png">
 
-    
   </a-assets>
-  <a-sky id="image-360" radius="10" src="#Lobby">
-      <a-animation attribute="rotation" fill="forwards" easing="linear" dur="150000" from="0 360 0" to="0 0 0" repeat="definite"></a-animation>
- 
- <a-entity id="links" layout="type: line; margin: 2.5" position="-5 3.5 -2" rotation= "0 70 0" scale = "0.5 0.5 1" >
+  <a-sky id="image-360" radius="10" src="#Level12Office">
+    <a-animation attribute="rotation" fill="forwards" easing="linear" dur="150000" from="0 360 0" to="0 0 0" repeat="definite"></a-animation>
+   
+    
+   <a-entity id="links" layout="type: line; margin: 2.5" position="2 -0.5 -6" rotation= "0 0 90" scale = "0.5 0.5 1" >
       
-     
-      <a-entity link = "on: click; href: GJFirstOffice.html" template="src: #link" data-src="arrow-up-thumb" data-thumb="#arrow-up-thumb" rotation = "0 0 0"></a-entity>   
+      <a-entity link = "on: click; href: 12th Floor Secretary Room.html" template="src: #link" data-src="arrow-up-thumb" data-thumb="#arrow-up-thumb" rotation = "0 0 0"></a-entity>   
            
       </a-entity>
-  
-
-
-
-
-  <a-entity id="links" layout="type: line" position="0 -4 0" rotation= "-90 250 0">
-     
-        
-
-      <a-entity link = "on: click; href: MainMenu.html" template="src: #link" data-src="Exit" data-thumb="#Exit"></a-entity>  
-       
-    </a-entity>
-  
+      
     
-    <a-entity id="links" layout="type: line" position="-7 3.5 -6" rotation= "45 45 0">
+      <a-entity id="links" layout="type: line; margin: 2.5" position="0 -4 0" rotation= "-90 250 0">
      
-      <a-entity template="src: #link" data-thumb="#info">    
+      <a-entity link = "on: click; href: MainMenu.html" template="src: #link" data-src="Exit" data-thumb="#Exit"></a-entity>  
        
       </a-entity>
 
-      
-      
+             
 
-    
-      
+       
+
     </a-sky>
     <script>
       var box = document.querySelector('a-scene');
@@ -173,7 +180,22 @@
   </a-scene>     
 
   
+<script type="text/javascript">
+    
+     function checkCompatibilty () {
+                if(!('speechSynthesis' in window)){
+                    alert('Your browser is not supported. If google chrome, please upgrade!!');
+                }
+            };
+             checkCompatibilty();
 
+              function speak () {
+                var msg = new SpeechSynthesisUtterance();
+               
+                msg.text = "12 South and its surrounding area was designed for George in 1935. …and it becomes George’s second office. He stays in that office at 12 South from 1935 until 1940 and then in 1940 he moves to 8 North office…  After George leaves 12 South in 1935…we put his son, Ramond Mecherle…there. Ramond remains in 12 South until he passes in 1954. They put the next president in 12 South which is Adlai Rust. Adlai Rust remains in that location until 1970. When he retires, they put Ed Rust Senior in there until 1974 when…they move Ed Senior to corporate headquarters. …Ed Rust Junior and Michael Tipsord have both sat at corporate headquarters and are the only two CEOs of the company who have not actually sat in our downtown facility.";
+                window.speechSynthesis.speak(msg);
+            };
+  </script>
 </body>
 
 <!--CSS Spinner-->
